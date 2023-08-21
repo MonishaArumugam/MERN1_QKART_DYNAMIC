@@ -7,7 +7,8 @@ import Checkout from "./components/Checkout";
 import Thanks from "./components/Thanks";
 
 export const config = {
-  endpoint: `http://${ipConfig.workspaceIp}:8082/api/v1`,
+  // endpoint: `http://${ipConfig.workspaceIp}:8082/api/v1`,
+  endpoint: `https://mern1-qkart-service.onrender.com/api/v1`,
 };
 
 function App() {
@@ -16,17 +17,16 @@ function App() {
       {/* TODO: CRIO_TASK_MODULE_LOGIN - To add configure routes and their mapping */}
       {/* <Register /> */}
       <Switch>
-        
         <Route path={"/login"}>
           <Login />
         </Route>
         <Route path={"/register"}>
           <Register />
         </Route>
-         <Route exact={true} path="/checkout">
+        <Route exact={true} path="/checkout">
           <Checkout></Checkout>
         </Route>
-         <Route exact={true} path="/thanks">
+        <Route exact={true} path="/thanks">
           <Thanks></Thanks>
         </Route>
         <Route path={"/"}>
